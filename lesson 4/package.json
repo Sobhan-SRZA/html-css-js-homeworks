@@ -1,0 +1,12 @@
+{
+  "name": "homework-4",
+  "version": "1.0.0",
+  "scripts": {
+    "watch":"sass sass/main.scss style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": "انجام پروزه تمرینی از روی عکس",
+  "devDependencies": {
+    "sass": "^1.87.0"
+  }
+}
