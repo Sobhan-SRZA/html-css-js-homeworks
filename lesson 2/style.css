@@ -1,0 +1,362 @@
+/* Font Install */
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Vazir';
+  src: url("fonts//Vazir-Medium-FD-WOL.woff") format("woff");
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(16, 61, 0);
+  text-justify: auto;
+  font-family: 'Vazir', 'Arial', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Scroll Bar */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #216a39;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(31, 83, 37);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Website Grid */
+.container {
+  min-height: max-content;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #408456;
+}
+
+.container>div {
+  padding: 10px;
+}
+
+/* Grid Header */
+.container>div.header {
+  display: flex;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  background-color: #0e5c28;
+  color: rgb(215, 255, 228);
+  text-align: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  place-self: center;
+  align-items: center;
+}
+
+.container>div.header>a {
+  text-decoration-line: none;
+  color: #42873c;
+  transition: all .4s ease-in-out;
+  text-shadow: 0 0 5px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.container>div.header>a:hover {
+  color: #8ee087;
+  text-shadow: white 0 0 5px;
+}
+
+.container>div.header>.icon>img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: #008f13 0 0 5px;
+  transition: all .5s ease-in-out;
+}
+
+.container>div.header>.icon>img:hover {
+  box-shadow: white 0 0 5px;
+}
+
+.container>div.header>.icon {
+  display: contents;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.container>div.header>.icon>select {
+  background-color: #03491a;
+  outline: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  color: #027511;
+  border: none;
+  box-shadow: #07370e 0 0 5px;
+  transition: all .5s ease-in-out;
+  font-weight: bolder;
+}
+
+.container>div.header>.icon>select:hover {
+  color: #05390c;
+  background-color: #299e4e;
+  box-shadow: white 0 0 5px;
+}
+
+.container>div.header>.search {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  align-content: center;
+  background-color: #03491a;
+  border-radius: 50px;
+  transition: all .5s ease-in-out;
+  box-shadow: #07370e 0 0 5px;
+}
+
+
+.container>div.header>.search>.icon {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container>div.header>.search>input {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  width: 35px;
+  height: 100%;
+  padding: 10px 20px 10px 50px;
+  border: none;
+  background-color: transparent;
+  color: #104c23;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+
+.container>div.header>.search>input::placeholder {
+  color: #104c23;
+  opacity: .5;
+}
+
+.container>div.header>.search:hover input,
+.container>div.header>.search:focus-within input {
+  outline: none;
+  width: 100%;
+  opacity: 1;
+  cursor: text;
+}
+
+.container>div.header>.search:hover,
+.container>div.header>.search:focus-within {
+  width: 200px;
+  background-color: #60a171;
+  border-color: #60a171;
+  box-shadow: 0 0 10px hsl(0, 0%, 29%), 0 0 15px #72ff6d;
+}
+
+.container>div.header>.search:hover .icon,
+.container>div.header>.search:focus-within .icon {
+  opacity: .2;
+}
+
+
+/* Grid Content */
+.container>div.content {
+  grid-area: content;
+  text-align: center;
+}
+
+/* Grid Content - Project Section */
+.container>div.content>section {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  direction: rtl;
+  color: #07370e;
+}
+
+.container>div.content>section>h2 {
+  color: #05390c;
+}
+
+.projects--cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.projects--card {
+  direction: rtl;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #1a7338;
+  height: 500px;
+  width: 250px;
+  transition: all .5s ease-in-out;
+}
+
+.projects--card h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #05390c;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.projects--card p {
+  font-size: medium;
+  color: #07370e;
+}
+
+.projects--card img {
+  margin-top: 15px;
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+  border: #05390c solid 5px;
+  transition: all .7s ease-in-out;
+}
+
+.projects--card img:hover {
+  border-width: 0;
+  box-shadow: #6bcf62 0 0 15px 1px;
+}
+
+.projects--card:hover {
+  box-shadow: #246e1d 8px 8px;
+}
+
+.projects--card:hover {
+  transform: scale(1.05);
+
+}
+
+.projects--card>.tech {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 5px;
+  justify-content: center;
+}
+
+.projects--card>.tech>span {
+  background: #165011;
+  color: #54b050;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.projects--card>.tech>span:hover {
+  background: #2a9a20;
+  text-shadow: 0 0 5px;
+  box-shadow: 0 0 5px;
+}
+
+/* Grid Content - About Us */
+.container>div.content>section>div.paragraph>p {
+  margin-top: 5px;
+}
+
+.container>div.content>section>div.paragraph {
+  background-color: #0f661c;
+  height: 100%;
+  max-width: 700px;
+  border: #1e6a28 solid 10px;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-align: left;
+  justify-self: center;
+  padding: 10px;
+  direction: ltr;
+}
+
+#per {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Grid Footer */
+.container>div.footer {
+  width: 100%;
+  text-align: center;
+  background-color: #0e5c28;
+  color: #14311e;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .container>div.header {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
+
+/* All Animations */
+/* Add loading animation to all sections */
+div {
+  animation: loading 2s ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    margin-top: 30px;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: .9;
+  }
+
+
+  100% {
+    transform: translateX(0);
+  }
+}
